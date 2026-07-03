@@ -1,9 +1,23 @@
-export default function Home() {
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+
+export default function Page() {
   return (
-    <main className="min-h-screen bg-black text-white flex items-center justify-center">
-      <h1 className="text-5xl font-bold">
-        Welcome to Manasi's AI Portfolio 🚀
-      </h1>
+    <main className="flex flex-col">
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Contact />
+      <Footer />
     </main>
   );
 }
