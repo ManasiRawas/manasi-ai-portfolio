@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+:root {
+  --mouse-x: 50vw;
+  --mouse-y: 50vh;
+  --mouse-x-percent: 50%;
+  --mouse-y-percent: 50%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -11,4 +18,40 @@ body {
   background: #030712;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+/* Premium AI Spotlight */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+
+  background:
+    radial-gradient(
+      700px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255,255,255,0.05),
+      transparent 60%
+    ),
+    radial-gradient(
+      450px circle at var(--mouse-x) var(--mouse-y),
+      rgba(34,211,238,0.08),
+      transparent 65%
+    );
+
+  transition: background 80ms linear;
+  will-change: background;
+}
+
+/* Better text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.3);
+  color: white;
 }
