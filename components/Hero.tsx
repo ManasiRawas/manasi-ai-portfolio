@@ -6,7 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 text-white relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center px-6 text-white relative">
 
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0f1c] to-black" />
